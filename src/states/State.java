@@ -1,9 +1,21 @@
 package states;
 
-public interface State {
-	public double digit();
-	public double positive();
-	public double negative();
-	public double decimal();
-	public double other();
+public abstract class State {
+	Context myContext;
+	public State(Context context){
+		myContext = context;
+	}
+	public abstract State execute(int index);
+	
+	public abstract State digit(char c);
+	
+	//public abstract State positive();
+	
+	//public abstract State negative();
+	
+	public abstract State decimal();
+	
+	public abstract State other();
+	
+	//public abstract State nullTerminator();
 }

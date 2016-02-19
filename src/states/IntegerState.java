@@ -1,35 +1,50 @@
 package states;
 
-public class IntegerState implements State {
+public class IntegerState extends State {
 
-	@Override
-	public double digit() {
-		// TODO Auto-generated method stub
-		return 0;
+	public IntegerState(Context context) {
+		super(context);
 	}
 
 	@Override
-	public double positive() {
-		// TODO Auto-generated method stub
-		return 0;
+	public State execute(int index) {
+		char myChar = myContext.getInput().charAt(index);
+		if (Character.isDigit(myChar)){
+			return digit(myChar);
+		}
+		else if (myChar == '.'){
+			return decimal();
+		}
+		else if (myChar == '\0'){
+			return nullTerminator();
+		}
+		return other();
 	}
 
 	@Override
-	public double negative() {
-		// TODO Auto-generated method stub
-		return 0;
+	public State digit(char c) {
+		double value = myContext.getValue();
+		myContext.setValue(10 * value + (c - '0'));
+		return myContext.getIntegerState();
+	}
+
+	
+	public State nullTerminator() {
+		myContext.setValue(myContext.getSign() * myContext.getValue());
+		return myContext.getEndState();
 	}
 
 	@Override
-	public double decimal() {
-		// TODO Auto-generated method stub
-		return 0;
+	public State decimal() {
+		myContext.setDecimalPlace(0.1);
+		return myContext.getDecimalState();
+	}
+	
+	@Override
+	public State other() {
+		myContext.setValue(0);
+		return myContext.getEndState();
 	}
 
-	@Override
-	public double other() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 	
 }
