@@ -29,14 +29,18 @@ public class TestContext {
 		context.setValue(54.52);
 		assertEquals(54.52, context.getValue(),0);
 	}
-	
+	/**
+	 * Tests the setter and getter for sign.
+	 */
 	@Test
 	public void testContextSetAndGetSign(){
 		Context context = new Context();
 		context.setSign(-1);
 		assertEquals(-1, context.getSign(),0);
 	}
-	
+	/**
+	 * Tests the getter and setter for place, which represents the current decimal place.
+	 */
 	@Test
 	public void testContextSetAndGetPlace(){
 		Context context = new Context();
