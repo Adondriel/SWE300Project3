@@ -1,4 +1,5 @@
 package states;
+
 public class State_Decimal implements State{
 
 	// The State_Decimal's Singleton Storage

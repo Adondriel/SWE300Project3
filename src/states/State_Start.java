@@ -1,4 +1,5 @@
 package states;
+
 public class State_Start implements State{
 	
 	// The State_Start's Singleton Storage
