@@ -4,16 +4,25 @@ import org.junit.Test;
 
 import states.Context;
 import states.State_Integer;
-
+/**
+ * 
+ * @author Adam Pine
+ * Tests the methods of context.
+ * Execute method is tested by the individual state tests.
+ */
 public class TestContext {
-	//Context Execute method is tested by each state's tests.
+	/**
+	 * Tests the setter and getter for currentstate method.
+	 */
 	@Test
 	public void testContextSetAndGetCurrentState(){
 		Context context = new Context();
 		context.setCurrentState(State_Integer.getState());
 		assertEquals(State_Integer.getState(), context.getCurrentState());
 	}
-	
+	/**
+	 * Tests the setter and getter for value.
+	 */
 	@Test
 	public void testContextSetAndGetValue(){
 		Context context = new Context();

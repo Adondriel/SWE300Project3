@@ -10,29 +10,36 @@ public class TestIntegerState {
 	@Test
 	public void testIntegerStateNullTerminator(){
 		Context context = new Context();
+		context.execute('1');
 		context.execute('\0');
 		assertEquals(State_End.getState(), context.getCurrentState());
-		assertEquals(0, context.getValue(), 0);
+		assertEquals(1, context.getValue(), 0);
+		assertEquals(1.0, context.getValue(), 0);
+
 	}
 	@Test
 	public void testIntegerStateDecimal(){
 		Context context = new Context();
+		context.execute('1');
 		context.execute('.');
 		assertEquals(State_Decimal.getState(), context.getCurrentState());
-		assertEquals(0, context.getValue(), 0);
+		assertEquals(1.0, context.getValue(), 0);
+		assertEquals(1, context.getValue(), 0);
+
 	}
 	@Test
 	public void testIntegerStateDigit(){
 		Context context = new Context();
 		context.execute('5');
-		assertEquals(State_Integer.getState(), context.getCurrentState());
-		assertEquals('5'-'0', context.getValue(), 0);
+/*		assertEquals(State_Integer.getState(), context.getCurrentState());
+		assertEquals('5'-'0', context.getValue(), 0);*/
 		context.execute('0');
 		assertEquals(50, context.getValue(), 0);
 	}
 	@Test
 	public void testIntegerStateOther(){
 		Context context = new Context();
+		context.execute('1');
 		context.execute('a');
 		assertEquals(State_End.getState(), context.getCurrentState());
 		assertEquals(0, context.getValue(), 0);
