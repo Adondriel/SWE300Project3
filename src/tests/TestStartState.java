@@ -48,7 +48,7 @@ public class TestStartState {
 		//State should be integer
 		assertEquals(State_Integer.getState(), context.getCurrentState());
 		//Sign should be 1.
-		assertEquals(1.0, context.getSign());
+		assertEquals(1, context.getSign());
 	}
 	/**
 	 * Tests the start state for a - sign.
