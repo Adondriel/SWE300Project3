@@ -4,7 +4,12 @@ public class State_Integer implements State{
 
 	// The State_Integer's Singleton Storage
 	private static State state;
-	
+	/**
+	 * Private constructor, to make this a singleton. does not actually have do anything.
+	 */
+	private State_Integer(){
+		
+	}
 	/**
 	 * Initialize the State_Integer State if it is not already initialized
 	 * @return the initialized State_Integer State [ Singleton ]

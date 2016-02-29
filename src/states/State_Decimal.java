@@ -6,6 +6,13 @@ public class State_Decimal implements State{
 	private static State state;
 	
 	/**
+	 * Private constructor, to make this a singleton. does not actually have do anything.
+	 */
+	private State_Decimal(){
+		
+	}
+	
+	/**
 	 * Initialize the State_Decimal State if it is not already initialized
 	 * @return the initialized State_Decimal state [ Singleton ]
 	 */

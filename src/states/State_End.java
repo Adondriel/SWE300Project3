@@ -6,6 +6,12 @@ public class State_End implements State{
 	private static State state;
 	
 	/**
+	 * Private constructor, to make this a singleton. does not actually have do anything.
+	 */
+	private State_End(){
+		
+	}
+	/**
 	 * Initialize the State_End State if it is not already initialized
 	 * @return the initialized State_End State [ Singleton ]
 	 */

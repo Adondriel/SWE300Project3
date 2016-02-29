@@ -6,6 +6,12 @@ public class State_Start implements State{
 	private static State state;
 	
 	/**
+	 * Private constructor, to make this a singleton. does not actually have do anything.
+	 */
+	private State_Start(){
+		
+	}
+	/**
 	 * Initialize the State_Start State if it is not already initialized
 	 * @return the initialized State_Start State [ Singleton ]
 	 */
