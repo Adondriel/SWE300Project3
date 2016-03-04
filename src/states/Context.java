@@ -1,5 +1,9 @@
 package states;
-
+/**
+ * 
+ * @author Adam Pine, Josh McMillen, and Benjamin Uleau
+ * 
+ * */
 public class Context {
 
 	// Context's Current State

@@ -1,5 +1,9 @@
 package states;
-
+/**
+ * 
+ * @author Adam Pine, Josh McMillen, and Benjamin Uleau
+ * 
+ * */
 public class State_Start implements State{
 	
 	// The State_Start's Singleton Storage

@@ -1,5 +1,9 @@
 package states;
-
+/**
+ * 
+ * @author Adam Pine, Josh McMillen, and Benjamin Uleau
+ * 
+ * */
 import java.util.Scanner;
 
 public class Runner{

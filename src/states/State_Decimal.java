@@ -1,5 +1,9 @@
 package states;
-
+/**
+ * 
+ * @author Adam Pine, Josh McMillen, and Benjamin Uleau
+ * 
+ * */
 public class State_Decimal implements State{
 
 	// The State_Decimal's Singleton Storage

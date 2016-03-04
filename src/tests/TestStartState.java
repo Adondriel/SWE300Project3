@@ -9,7 +9,7 @@ import states.State_End;
 import states.State_Integer;
 /**
  * 
- * @author Adam Pine
+ * @author Adam Pine, Josh McMillen, and Benjamin Uleau
  * Tests for the Start State
  */
 public class TestStartState {

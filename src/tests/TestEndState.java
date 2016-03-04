@@ -7,7 +7,7 @@ import org.junit.Test;
 import states.Context;
 import states.State_End;
 /**
- * @author Adam Pine
+ * @author Adam Pine, Josh McMillen, and Benjamin Uleau
  * Tests for the end state.
  */
 public class TestEndState {
